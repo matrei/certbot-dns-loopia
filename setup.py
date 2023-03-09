@@ -13,7 +13,7 @@ except FileNotFoundError:
 
 setup(
     name="certbot-dns-loopia",
-    version="1.0.1",
+    version="2.4.0",
     description="Loopia DNS authentication plugin for Certbot",
     long_description=LONG_DESC,
     long_description_content_type="text/markdown",
@@ -23,9 +23,9 @@ setup(
     url="https://www.github.com/runfalk/certbot-loopia",
     packages=find_packages(),
     install_requires=[
-        "acme>=1.8.0",
-        "certbot>=1.7.0",
-        "tldextract>=3.3.0",
+        "acme>=2.4.0",
+        "certbot>=2.4.0",
+        "tldextract>=3.4.0",
     ],
     extras_require={
         "dev": [
