@@ -4,6 +4,8 @@ Setup for certbot-dns-loopia.
 # pylint: disable=consider-using-with
 from setuptools import setup, find_packages
 
+version = '2.4.0'
+
 try:
     LONG_DESC = open("README.md", encoding="utf-8").read()
 except FileNotFoundError:
@@ -13,7 +15,7 @@ except FileNotFoundError:
 
 setup(
     name="certbot-dns-loopia",
-    version="2.4.0",
+    version=version,
     description="Loopia DNS authentication plugin for Certbot",
     long_description=LONG_DESC,
     long_description_content_type="text/markdown",
