@@ -10,8 +10,24 @@ the [Loopia XML-RPC API](https://www.loopia.se/api/).
 
 ## Installing
 
+### Via snap (requires certbot to installed via snap)
+
+#### If installing for the first time
 ```shell
-$ sudo pip install certbot-dns-loopia
+$ sudo snap install --dangerous certbot-dns-loopia_{VERSION}_amd64.snap
+$ sudo snap set certbot trust-plugin-with-root=ok
+$ sudo snap connect certbot:plugin certbot-dns-loopia
+$ sudo snap connect certbot-dns-loopia:certbot-metadata certbot:certbot-metadata
+```
+
+#### If updating certbot-dns-loopia snap from a previous version
+```shell
+$ sudo snap install --dangerous certbot-dns-loopia_{VERSION}_amd64.snap
+```
+
+### Via pip3
+```shell
+$ sudo pip3 install certbot-dns-loopia
 ```
 
 Note that you should normally install this as `root`, unless you know
